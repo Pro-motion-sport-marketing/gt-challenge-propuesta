@@ -43,11 +43,14 @@ section{padding-block:90px;scroll-margin-top:60px}
 .blocks{display:grid;gap:12px;margin-top:20px}
 .blk{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;padding:18px;border-radius:18px;background:var(--panel);border-left:5px solid var(--c)}
 .blk .t{font-family:"PROS";font-size:15px;color:var(--c);white-space:nowrap}.blk b{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}.blk p{color:var(--dim);font-size:15px}
+.blk p b{display:inline;font-size:inherit;text-transform:none;letter-spacing:0;margin:0;color:#fff}
 .ph{background:rgba(255,208,0,.2);color:var(--yel);font-weight:700;border-radius:4px;padding:0 4px}
 .phone{max-width:360px;margin:0 auto;border-radius:40px;padding:12px;background:#1b1b1d;border:1px solid var(--line);box-shadow:0 30px 80px rgba(255,90,0,.18)}
 .wa{border-radius:30px;overflow:hidden;background:#0b141a}.wa-top{display:flex;align-items:center;gap:10px;padding:14px 16px;background:#202c33}.wa-top i{width:34px;height:34px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-style:normal;font-family:"PROS";color:#111;font-size:14px}.wa-top b{font-size:14px}.wa-top small{display:block;color:var(--mut);font-size:11px}
 .wa-body{padding:18px 14px 22px}.bub{background:#005c4b;border-radius:14px 14px 4px 14px;padding:12px 14px;font-size:13.5px;line-height:1.55;margin-left:16px}.bub p+p{margin-top:8px}.bub small{display:block;text-align:right;color:rgba(255,255,255,.55);font-size:10.5px;margin-top:6px}
-.bub .s1{box-shadow:inset 3px 0 0 #ff2a00;padding-left:8px}.bub .s2{box-shadow:inset 3px 0 0 #ff8a00;padding-left:8px}.bub .s3{box-shadow:inset 3px 0 0 #ffd000;padding-left:8px}
+.bub .s1{box-shadow:inset 3px 0 0 #ff2a00;padding-left:8px}.bub .s2{box-shadow:inset 3px 0 0 #ff8a00;padding-left:8px}.bub .s3{box-shadow:inset 3px 0 0 #ffd000;padding-left:8px}.bub .s1b{box-shadow:inset 3px 0 0 #ff5a00;padding-left:8px}.ej{text-align:center;color:var(--mut);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.meta{margin-bottom:34px;padding:26px;border-radius:24px;background:var(--panel);border:1px solid rgba(255,138,0,.45)}.metas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:16px}.metas i{font-style:normal;font-size:26px;display:block;margin-bottom:8px}.metas b{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}.metas p{color:var(--dim);font-size:14.5px}
+@media (max-width:980px){.metas{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.metas{grid-template-columns:minmax(0,1fr)}}
 .copiar{display:block;margin:18px auto 0;padding:13px 22px;border-radius:99px;border:0;background:var(--grad);color:#111;font:700 12.5px "Blauer",sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 /* cadenas */
 .cads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -116,9 +119,9 @@ footer{padding-block:36px;border-top:1px solid var(--line);color:var(--mut);font
 <section id="idea"><div class="wrap">
 <div class="sec-h"><div class="kick">01 · Cómo funciona</div><h2>De un video <span class="grad">a una cadena</span></h2></div>
 <div class="flow">
-<div class="fs"><div class="ic">🎥<em>1</em></div><b>Graba</b><small>Video vertical de 25–35 s con el guion.</small></div>
-<div class="fs"><div class="ic">🏆<em>2</em></div><b>Cuenta</b><small>Su mejor carrera y su pista favorita.</small></div>
-<div class="fs"><div class="ic">⚔️<em>3</em></div><b>Reta</b><small>Nombra a sus rivales de la tabla.</small></div>
+<div class="fs"><div class="ic">🎥<em>1</em></div><b>Graba</b><small>Video vertical de 30–40 s con el guion.</small></div>
+<div class="fs"><div class="ic">🏆<em>2</em></div><b>Cuenta</b><small>Sus piques del año, su mejor carrera y su pista.</small></div>
+<div class="fs"><div class="ic">⚔️<em>3</em></div><b>Reta</b><small>Reta por nombre al rival de su pique.</small></div>
 <div class="fs"><div class="ic">🔁<em>4</em></div><b>Responden</b><small>El retado graba y reta al siguiente.</small></div>
 <div class="fs"><div class="ic">🗳️<em>5</em></div><b>Vota la gente</b><small>Cada video sale con encuesta en historias.</small></div>
 </div>
@@ -127,18 +130,20 @@ footer{padding-block:36px;border-top:1px solid var(--line);color:var(--mut);font
 </div></section>
 
 <section id="guion"><div class="wrap">
-<div class="sec-h"><div class="kick">02 · Guion para los pilotos</div><h2>35 segundos, <span class="grad">3 partes</span></h2><p>Un mismo texto para todos, enviado por WhatsApp. Lo amarillo cambia según cada piloto.</p></div>
+<div class="sec-h"><div class="kick">02 · Guion para los pilotos</div><h2>40 segundos, <span class="grad">4 partes</span></h2><p>La misma estructura para todos, enviada por WhatsApp. Lo amarillo cambia según cada piloto.</p></div>
+<div class="meta"><div class="kick">Lo que buscamos con cada piloto</div><div class="metas"><div><i>⚔️</i><b>Un pique real</b><p>Que nombre a un rival concreto y dónde se midieron. No “mis rivales”, sino “Tatiana Calderón en Barbados”.</p></div><div><i>🔥</i><b>La competitividad</b><p>Que diga con sus palabras que ese nivel es lo que hace grande al GT Challenge.</p></div><div><i>🏁</i><b>Ganas de revancha</b><p>Que quiera volver a medirse con ese nivel en la final del 5 de diciembre.</p></div><div><i>🎯</i><b>Retar a ese mismo rival</b><p>El reto va al piloto de su pique, por su nombre. Así el duelo sigue en el siguiente video.</p></div></div></div>
 <div class="guion">
 <div>
-<div class="timebar"><i style="flex:10;background:#ff2a00"></i><i style="flex:15;background:#ff8a00"></i><i style="flex:10;background:#ffd000"></i></div>
-<div class="tlab"><span>0 s</span><span>10 s</span><span>25 s</span><span>35 s</span></div>
+<div class="timebar"><i style="flex:6;background:#ff2a00"></i><i style="flex:14;background:#ff5a00"></i><i style="flex:12;background:#ff8a00"></i><i style="flex:8;background:#ffd000"></i></div>
+<div class="tlab"><span>0 s</span><span>6 s</span><span>20 s</span><span>32 s</span><span>40 s</span></div>
 <div class="blocks">
-<div class="blk" style="--c:#ff2a00"><span class="t">0–10 s</span><div><b>La cita y los rivales</b><p>Invita a la final del <b>5 de diciembre</b> y nombra a <span class="ph">sus rivales</span>.</p></div></div>
-<div class="blk" style="--c:#ff8a00"><span class="t">10–25 s</span><div><b>Las 2 preguntas fijas</b><p>🏆 Su mejor carrera: <span class="ph">[fecha]</span> · 🛣️ Su pista favorita: <span class="ph">[circuito]</span> y por qué.</p></div></div>
-<div class="blk" style="--c:#ffd000"><span class="t">25–35 s</span><div><b>El reto</b><p>⚔️ Reta por nombre a <span class="ph">[nombre]</span> y <span class="ph">[nombre]</span> a contar la suya.</p></div></div>
+<div class="blk" style="--c:#ff2a00"><span class="t">0–6 s</span><div><b>La cita</b><p>Invita a la final del <b>5 de diciembre</b> en el Autódromo Panamá.</p></div></div>
+<div class="blk" style="--c:#ff5a00"><span class="t">6–20 s</span><div><b>El pique y el nivel</b><p>⚔️ Cuenta un pique con <span class="ph">[rival]</span> en <span class="ph">[fecha]</span>, dice que eso demuestra la competitividad del GT Challenge y que quiere volver a medirse en la final.</p></div></div>
+<div class="blk" style="--c:#ff8a00"><span class="t">20–32 s</span><div><b>Las 2 preguntas fijas</b><p>🏆 Su mejor carrera: <span class="ph">[fecha]</span> · 🛣️ Su pista favorita: <span class="ph">[circuito]</span> y por qué.</p></div></div>
+<div class="blk" style="--c:#ffd000"><span class="t">32–40 s</span><div><b>El reto</b><p>🎯 Reta por su nombre al <span class="ph">[rival del pique]</span> a contar su mejor carrera y su pista. “¡Nos vemos pronto!”</p></div></div>
 </div></div>
 <div><div class="phone"><div class="wa"><div class="wa-top"><i>GT</i><div><b>GT Challenge · Pilotos</b><small>en línea</small></div></div>
-<div class="wa-body"><div class="bub" id="texto"><p class="s1">“Nos vemos este 5 de diciembre en el Autódromo Panamá para cerrar el campeonato. Ha sido increíble competir contra <span class="ph">[rivales de su categoría]</span>.</p><p class="s2">Mi mejor carrera del año fue, por mucho, <span class="ph">[fecha]</span>, y la pista que más disfruté fue <span class="ph">[circuito]</span>, porque <span class="ph">[razón breve]</span>.</p><p class="s3"><span class="ph">[Nombre]</span> y <span class="ph">[nombre]</span>: los reto a que cuenten cuál fue la suya.”</p><small>10:24 ✓✓</small></div></div></div></div>
+<div class="wa-body"><div class="ej">Ejemplo real · Will Redford abre la cadena</div><div class="bub" id="texto"><p class="s1">“Nos vemos este 5 de diciembre en el Autódromo Panamá para cerrar el campeonato.</p><p class="s1b">Ha sido increíble competir contra pilotos de tan alto nivel. Tuvimos algunos piques con pilotos como <span class="ph">Tatiana Calderón</span> en <span class="ph">Barbados</span>, y creo que eso demuestra la competitividad que tiene el GT Challenge. Espero en la final volver a medirme con pilotos de ese nivel.</p><p class="s2">Mi mejor carrera del año fue, por mucho, <span class="ph">[fecha]</span>, y la pista que más disfruté fue <span class="ph">[circuito]</span>, porque <span class="ph">[razón breve]</span>.</p><p class="s3">Y ahora te reto a ti, <span class="ph">Tati</span>: cuéntanos cuál ha sido tu mejor carrera y tu pista favorita. ¡Nos vemos pronto!”</p><small>10:24 ✓✓</small></div></div></div></div>
 <button class="copiar" type="button" id="copiar">Copiar guion</button></div>
 </div></div></section>
 
@@ -166,8 +171,8 @@ footer{padding-block:36px;border-top:1px solid var(--line);color:var(--mut);font
 <section id="piezas"><div class="wrap">
 <div class="sec-h"><div class="kick">06 · Lo que hay que producir</div><h2>Tres piezas, <span class="grad">el resto lo graban ellos</span></h2></div>
 <div class="mocks">
-<div class="mock"><div class="m m-reto"><img class="logo" src="media/gt_logo_white.png" alt=""><div class="slot"><div><em>👤</em>Foto del piloto</div></div><div><span class="m-tag">⚔️ Reto lanzado</span><h4>[Piloto]</h4><div class="vs">reta a <b>[rival]</b> y <b>[rival]</b></div></div></div>
-<h3>Arte “reto lanzado”</h3><p>Foto del piloto y a quién reta.</p><span class="use">1 plantilla · 9 usos</span></div>
+<div class="mock"><div class="m m-reto"><img class="logo" src="media/gt_logo_white.png" alt=""><div class="slot"><div><em>👤</em>Foto del piloto</div></div><div><span class="m-tag">⚔️ Reto lanzado</span><h4>[Piloto]</h4><div class="vs">reta a <b>[rival del pique]</b></div></div></div>
+<h3>Arte “reto lanzado”</h3><p>Foto del piloto y el rival al que reta.</p><span class="use">1 plantilla · 9 usos</span></div>
 <div class="mock"><div class="m story" style="max-width:none;border-radius:24px"><div class="bar"></div><h4>¿Cuál fue tu carrera favorita de 2026?</h4><div class="op"><i style="width:22%"></i><span>🇵🇦 Gran Premio Panamá</span><b>22%</b></div><div class="op"><i style="width:18%"></i><span>🇵🇦 500 km de Panamá</span><b>18%</b></div><div class="op"><i style="width:14%"></i><span>🇬🇾 Guyana</span><b>14%</b></div><div class="op"><i style="width:24%"></i><span>🇧🇧 Barbados</span><b>24%</b></div><div class="op"><i style="width:22%"></i><span>🇲🇽 Puebla</span><b>22%</b></div></div>
 <h3>Historia con encuesta</h3><p>Republica cada video con la pregunta.</p><span class="use">1 plantilla · 9 usos</span></div>
 <div class="mock"><div class="m m-car"><img class="logo" src="media/gt_logo_white.png" alt=""><div><div class="kick">4 de diciembre · cierre</div><h4>Pilotos <span class="grad">vs. afición</span></h4><div class="duel"><div><div class="ico">🏎️</div><b>[fecha]</b><small>eligieron los pilotos</small></div><div><div class="ico">🙌</div><b>[fecha]</b><small>votó la comunidad</small></div></div></div><div class="dots"><i></i><i></i><i></i><i></i><i></i></div></div>
@@ -178,7 +183,8 @@ footer{padding-block:36px;border-top:1px solid var(--line);color:var(--mut);font
 <div class="sec-h"><div class="kick">07 · Por resolver</div><h2>Dos decisiones <span class="grad">antes de arrancar</span></h2></div>
 <div class="pend">
 <div class="pcard"><div class="top"><div class="ico">🚦</div><h3>¿Quién arranca cada cadena?</h3></div>
-<div class="opt"><i>✅</i><span><b>Sugerido:</b> el que va arriba en cada disputa.</span></div>
+<div class="opt"><i>🟢</i><span><b>Confirmado:</b> Will Redford abre y reta a Tatiana Calderón. Envía su video hoy, 18 de noviembre.</span></div>
+<div class="opt"><i>✅</i><span><b>Resto de cadenas:</b> el que va arriba en cada disputa, retando al rival de su pique.</span></div>
 <div class="opt"><i>🤝</i><span><b>Coordinar con Silvia</b> para que los pilotos no se enteren por Instagram.</span></div></div>
 <div class="pcard"><div class="top"><div class="ico">⏱️</div><h3>Plazo de 48 h por eslabón</h3></div>
 <div class="risk"><span class="on"></span><span class="on"></span><span class="br"></span><span></span></div>
